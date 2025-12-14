@@ -32,5 +32,4 @@ function generateQuote() {
 
 BTN.addEventListener("click", generateQuote);
 
-// Show first quote on load
 generateQuote();
