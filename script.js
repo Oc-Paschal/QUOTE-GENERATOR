@@ -18,8 +18,19 @@ const quotes = [
 {text:"Don’t be pushed around by the fears in your mind. Be led by the dreams in your heart.", author: "Roy T. Bennett"},
 {text: "The secret of getting ahead is getting started.", author: "Mark Twain"},
 {text:"In the middle of every difficulty lies opportunity.", author: "Albert Einstein"},
-{text: }
-
-
+{text:"Your time is limited, so don’t waste it living someone else’s life.", author: "Steve Jobs" },
+{text: "It can only get better", author: "OcPaschal"},
 
 ]
+
+
+function generateQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  QUOTE.textContent = quotes[randomIndex].text;
+  AUTHORNAME.textContent = "- " + quotes[randomIndex].author;
+}
+
+BTN.addEventListener("click", generateQuote);
+
+// Show first quote on load
+generateQuote();
